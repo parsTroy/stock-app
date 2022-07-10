@@ -1,0 +1,92 @@
+/* Global Style Elements */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+button {
+    margin: 0.5em 1em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background-color: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+button:hover {
+    background-color: #7c7c7c6b;
+}
+input {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background-color: #7c7c7c2b;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 105%;
+    width: calc(100% - 100px);
+}
+
+/* Main Style Elements */
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: #222 no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://source.unsplash.com/1920x1080?rain,rainjapan,rainkorea,rainseoul,raintokyo);
+}
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1.5em;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.price {
+    margin: 0;
+    margin-bottom: 0.6em;
+}
+.high {
+    color: rgb(35, 176, 89);
+    font-size: 135%;
+}
+.low {
+    color: rgb(190, 91, 91);
+    font-size: 135%;
+}
+
+/* Loading Elements */
+
+.stock.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+    transition: 0.2s ease-in-out;
+}
+.stock.loading:after {
+    visibility: visible;
+    letter-spacing: 5px;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
