@@ -5,7 +5,7 @@ body {
     padding: 0;
     font-family: 'Quicksand', sans-serif;
 }
-button {
+.search-btn {
     margin: 0.5em 1em;
     border-radius: 50%;
     border: none;
@@ -46,6 +46,28 @@ input {
     background-size: cover;
     background-position: center;
     background-image: url(https://source.unsplash.com/1920x1080?rain,rainjapan,rainkorea,rainseoul,raintokyo);
+}
+.portfolio-link {
+    padding: 5px;
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.portfolio-btn {
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    align-items: center;
+    outline: none;
+    background-color: #1515159b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 .card {
     background: #000000d0;
