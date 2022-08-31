@@ -1,21 +1,21 @@
 let stock = {
-    "apiKey": "vixQjL6qlMgy72k0XrFAtGp62c_4681S",
+    "apiKey": "0b92bda5d2f297a72d359be292be3991",
     fetchStock: function (symbol) {
         fetch(
-            "https://api.polygon.io/v1/open-close/"
+            "https://financialmodelingprep.com/api/v3/profile/"
             + symbol
-            + "/2020-10-14?adjusted=true&apiKey=" 
+            + "?apikey=" 
             + this.apiKey,
         ).then((response) => response.json())
         .then((data) => this.displayStock(data));
     },
     displayStock: function(data) {
-        const { symbol } = data;
-        const { close } = data;
-        const { high } = data;
-        const { low } = data;
-        const { volume } = data;
-        console.log(symbol, close, high, volume);
+        const symbol = data[0].companyName;
+        const close = data[0].price;
+        const high = data[0].range.slice(7);
+        const low = data[0].range.slice(0, 6);
+        const volume = data[0].volAvg;
+        console.log(symbol, close, high, low, volume);
         document.querySelector(".ticker").textContent = `${symbol}`;
         document.querySelector(".price").textContent = `$ ${close}`;
         document.querySelector(".volume").textContent = `Volume: ${volume}`;
